@@ -1,0 +1,9 @@
+services:
+ app:
+    image: node:lts
+    working_dir: /var/www/html/app/
+    volumes:
+      - .:/var/www/html/app
+    ports:
+      - 5511:5511
+    entrypoint: bash -c "chmod +x start-dev.sh && ./start-dev.sh"
